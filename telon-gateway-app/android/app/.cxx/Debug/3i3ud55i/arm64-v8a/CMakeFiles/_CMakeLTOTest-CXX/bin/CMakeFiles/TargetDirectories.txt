@@ -1,0 +1,4 @@
+C:/work/Mostafa/react-native-gsm-sip-gateway/telon-gateway-app/android/app/.cxx/Debug/3i3ud55i/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir
+C:/work/Mostafa/react-native-gsm-sip-gateway/telon-gateway-app/android/app/.cxx/Debug/3i3ud55i/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir
+C:/work/Mostafa/react-native-gsm-sip-gateway/telon-gateway-app/android/app/.cxx/Debug/3i3ud55i/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/edit_cache.dir
+C:/work/Mostafa/react-native-gsm-sip-gateway/telon-gateway-app/android/app/.cxx/Debug/3i3ud55i/arm64-v8a/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/rebuild_cache.dir

@@ -1,13 +1,8 @@
 {
-  "name": "recat-native-tele-example",
+  "name": "GatewayApp",
   "main": "index.js",
-  "description": "Example of react-native-tele for React Native",
+  "description": "Gateway App",
   "version": "0.0.1",
-  "author": {
-    "name": "Anton Dodonov",
-    "email": "cpodimas@gmail.com"
-  },
-  "license": "ISC",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -16,13 +11,13 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "console-feed": "^3.8.0",
     "react": "19.1.0",
     "react-native": "0.80.0",
-    "react-native-console-panel": "^0.1.0",
     "react-native-device-info": "^10.12.0",
-    "react-native-replace-dialer": "file:../react-native-replace-dialer",
+    "react-native-replace-dialer": "^0.0.12",
     "react-native-sip2": "^3.0.2",
-    "react-native-tele": "file:../react-native-tele"
+    "react-native-tele": "^0.0.9"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",

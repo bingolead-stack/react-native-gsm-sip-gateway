@@ -6,35 +6,57 @@ import {
   View,
   Text,
   StatusBar,
+  PermissionsAndroid,
+  Platform,
+  Alert,
 } from 'react-native';
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-
-    // Show console panel in dev mode (react-native-console-panel does this)
-    // this.ConsolePanel = require('react-native-console-panel').displayWhenDev();
-  }
 
   async componentDidMount() {
-    // If you have a native module, log it here safely
-    // console.log(this.tGateway);
+    if (Platform.OS === 'android') {
+      await this.ensurePhoneStatePermission();
+    }
+  }
+
+  async ensurePhoneStatePermission() {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.READ_PHONE_STATE,
+        {
+          title: 'Phone Permission Required',
+          message:
+            'This app needs access to phone state for SIP and call handling.',
+          buttonPositive: 'Allow',
+          buttonNegative: 'Deny',
+        }
+      );
+
+      if (granted !== PermissionsAndroid.RESULTS.GRANTED) {
+        Alert.alert(
+          'Permission denied',
+          'Phone state permission is required for the app to work properly.'
+        );
+      }
+    } catch (err) {
+      console.warn('Permission error:', err);
+    }
   }
 
   render() {
-    // const ConsolePanel = this.ConsolePanel;
-
     return (
       <>
         <StatusBar barStyle="dark-content" />
         <SafeAreaView style={styles.safeArea}>
           <ScrollView
             contentInsetAdjustmentBehavior="automatic"
-            style={styles.scrollView}>
+            style={styles.scrollView}
+          >
             <View style={styles.body}>
               <View style={styles.sectionContainer}>
                 <Text style={styles.sectionTitle}>Gateway log</Text>
-                {/* {ConsolePanel} */}
+                <View style={styles.container}>
+                </View>
               </View>
             </View>
           </ScrollView>
@@ -51,6 +73,12 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     backgroundColor: '#F5F5F5',
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'red'
   },
   body: {
     backgroundColor: '#FFFFFF',

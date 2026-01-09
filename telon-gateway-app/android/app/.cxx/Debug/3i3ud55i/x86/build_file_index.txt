@@ -1,0 +1,1 @@
+C:\work\Mostafa\react-native-gsm-sip-gateway\telon-gateway-app\node_modules\react-native\ReactAndroid\cmake-utils\default-app-setup\CMakeLists.txt
