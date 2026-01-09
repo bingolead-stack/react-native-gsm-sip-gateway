@@ -1,8 +1,0 @@
-# ninja log v5
-25	542	7896738237493286	build.ninja	64dc7bc334ea3363
-1	22	0	C:/work/Mostafa/react-native-gsm-sip-gateway/telon-gateway-app/android/app/.cxx/Debug/3i3ud55i/x86_64/CMakeFiles/cmake.verify_globs	e3645594fd956af0
-8	3339	7896735679624118	CMakeFiles/appmodules.dir/OnLoad.cpp.o	d6273f0e9a25bcc9
-12	3033	7896735676619103	CMakeFiles/appmodules.dir/a3f014ae2b4bdbfa2724d091331723e6/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	6a4b86ed157f9a93
-3339	3430	7896735680626360	C:/work/Mostafa/react-native-gsm-sip-gateway/telon-gateway-app/android/app/build/intermediates/cxx/Debug/3i3ud55i/obj/x86_64/libappmodules.so	907fbb17b10916e9
-0	8	0	clean	1a5015d96e99b06b
-1	23	0	C:/work/Mostafa/react-native-gsm-sip-gateway/telon-gateway-app/android/app/.cxx/Debug/3i3ud55i/x86_64/CMakeFiles/cmake.verify_globs	e3645594fd956af0

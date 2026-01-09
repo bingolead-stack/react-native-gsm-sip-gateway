@@ -1,1 +1,0 @@
-C:\work\Mostafa\react-native-gsm-sip-gateway\telon-gateway-app\android\app\build\intermediates\cxx\Debug\3i3ud55i\obj\x86
