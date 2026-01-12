@@ -102,10 +102,14 @@ export default class Gateway{
         sConfig.username="50018";
         sConfig.password="pass50018";
       } else {
-        tConfig={ReplaceDialer:false,Permissions:false};
-        sConfig.name="50016";
-        sConfig.username="50016";
-        sConfig.password="pass50016";
+        tConfig={ReplaceDialer:false,Permissions:true};
+        // sConfig.name="50016";
+        // sConfig.username="50016";
+        // sConfig.password="pass50016";
+        sConfig.name="1001";
+        sConfig.username="1001";
+        sConfig.password="m(Zo2(SW";
+        sConfig.domain="104.248.43.35";
       }
 
       
@@ -177,8 +181,9 @@ export default class Gateway{
         "username": sConfig.username, //"50015",
         "password": sConfig.password, //"pass50015",
         //"domain": "192.168.88.254:6060",
-        "domain": "192.168.88.254",
-        "regServer": "",
+        // "domain": "192.168.88.254",
+        "domain": sConfig.domain,
+        "regServer": sConfig.domain,
         //"regServer": "192.168.88.254", // Default wildcard
         
   
@@ -213,11 +218,16 @@ export default class Gateway{
       console.log(configuration);
 
 
-      let state = await this.sEndpoint.start();
-      console.log("🔮 🚀 sEndpoint started");
+      try {
+        let state = await this.sEndpoint.start(configuration);
+        console.log("🔮 🚀 sEndpoint started");
+        let { accounts, calls, settings, connectivity } = state;
+        console.log("🔮 🚧 state:\n", state)
+      } catch (error) {
+        console.log("err");
+        console.error(error);
+      }
   
-      let { accounts, calls, settings, connectivity } = state;
-      console.log("🔮 🚧 state:\n", state)
   
       try {
         console.log("endpoint.createAccount");
